@@ -1,8 +1,24 @@
 {
-  "name": "Steemhunt Prerenderer",
+  "name": "prerenderer",
   "version": "1.0.0",
-  "license": "MIT",
+  "description": "Steemhunt Prerenderer",
+  "main": "server.js",
   "dependencies": {
     "prerender": "^5.4.4"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Steemhunt/prerender.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Steemhunt/prerender/issues"
+  },
+  "homepage": "https://github.com/Steemhunt/prerender#readme"
 }
