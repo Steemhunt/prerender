@@ -1,0 +1,8 @@
+{
+  "name": "Steemhunt Prerenderer",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "prerender": "^5.4.4"
+  }
+}
