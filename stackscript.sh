@@ -12,4 +12,5 @@ cd ~/prerender && npm install
 
 # Demonize server
 sudo npm install -g pm2
+pm2 start server.js
 pm2 startup systemd # and copy the last command
