@@ -4,6 +4,12 @@ sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable
 sudo apt update
 sudo apt install google-chrome-stable
 
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+git clone git@github.com:Steemhunt/prerender.git
+cd ~/prerender && npm install
+
 # Demonize server
 sudo npm install -g pm2
 pm2 startup systemd # and copy the last command
