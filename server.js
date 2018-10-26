@@ -1,6 +1,6 @@
 const prerender = require('prerender');
 const server = prerender({
   port: 7777,
-  workers: 2
+  workers: 4
 });
 server.start();
