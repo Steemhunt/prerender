@@ -23,12 +23,12 @@ exit
 # Install Google Chrome
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-sudo apt install google-chrome-stable # 73.0.3683.86
+sudo apt update && sudo apt install google-chrome-stable # 79.0.3945.130-1
 google-chrome-stable --version
 
 sudo apt-get install curl python-software-properties
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-sudo apt-get install -y nodejs
+curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
+sudo apt update && sudo apt install -y nodejs
 
 git clone git@github.com:Steemhunt/prerender.git
 cd ~/prerender && npm install
