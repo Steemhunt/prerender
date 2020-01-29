@@ -4,4 +4,5 @@ const server = prerender({
   workers: 256,
   pageLoadTimeout: 40 * 1000
 });
+server.use(require('prerender-memory-cache'))
 server.start();
