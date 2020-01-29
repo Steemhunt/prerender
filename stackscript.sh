@@ -36,5 +36,5 @@ cd ~/prerender && npm install
 
 # Demonize server
 sudo npm install -g pm2@latest
-CACHE_MAXSIZE=10000 CACHE_TTL=1200 pm2 start server.js --node-args="--max_old_space_size=15000" # 10,000 items for 10 minutes / memory limit 15G
+CACHE_MAXSIZE=10000 CACHE_TTL=1200 pm2 start server.js --node-args="--max-old-space-size==15000" # 10,000 items for 10 minutes / memory limit 15G
 pm2 startup systemd # and copy the last command
