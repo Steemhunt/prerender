@@ -7,7 +7,7 @@ sudo apt update && sudo apt -y upgrade && sudo apt -y dist-upgrade && sudo apt -
 sudo dpkg-reconfigure tzdata # Set it KST
 sudo service cron restart # MUST
 
-sudo vim /etc/ssh/sshd_config # change port to 2222
+sudo vim /etc/ssh/sshd_config
 sudo service sshd restart
 
 USER_NAME="updatebot"
