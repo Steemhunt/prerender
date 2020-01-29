@@ -1,7 +1,7 @@
 const prerender = require('prerender');
 const server = prerender({
   port: 7777,
-  workers: 8,
-  pageLoadTimeout: 60 * 1000
+  workers: 32,
+  pageLoadTimeout: 40 * 1000
 });
 server.start();
