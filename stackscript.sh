@@ -26,14 +26,15 @@ sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable
 sudo apt update && sudo apt install google-chrome-stable # 79.0.3945.130-1
 google-chrome-stable --version
 
-sudo apt-get install curl python-software-properties
+sudo apt install -y curl python-software-properties
 curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
 sudo apt update && sudo apt install -y nodejs
+node -v
 
 git clone git@github.com:Steemhunt/prerender.git
 cd ~/prerender && npm install
 
 # Demonize server
-sudo npm install -g pm2
-pm2 start server.js
+sudo npm install -g pm2@latest
+CACHE_MAXSIZE=10000 CACHE_TTL=600 pm2 start server.js # 10,000 items for 10 minutes
 pm2 startup systemd # and copy the last command
