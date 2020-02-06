@@ -23,7 +23,7 @@ exit
 # Install Google Chrome
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-sudo apt update && sudo apt install google-chrome-stable # 79.0.3945.130-1
+sudo apt update && sudo apt install google-chrome-stable # 80.0.3987.87
 google-chrome-stable --version
 
 sudo apt install -y curl python-software-properties
@@ -31,11 +31,11 @@ curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
 sudo apt update && sudo apt install -y nodejs
 node -v
 
-git clone git@github.com:Steemhunt/prerender.git
+git clone https://github.com/Steemhunt/prerender.git
 cd ~/prerender && npm install
 
 # Demonize server
 sudo npm install -g pm2@latest
 # CACHE_MAXSIZE=10000 CACHE_TTL=1200 pm2 start prerender.js --node-args="--max_old_space_size=15000" # 10,000 items for 10 minutes / memory limit 15G
-pm2 start prerender.js --max-memory-restart 500M
+pm2 start prerender.js # --max-memory-restart 200M
 pm2 startup systemd # and copy the last command

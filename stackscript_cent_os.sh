@@ -17,3 +17,5 @@ cd ~/prerender && npm install
 sudo npm install -g pm2@latest
 CACHE_MAXSIZE=10000 CACHE_TTL=600 pm2 start server.js # 10,000 items for 10 minutes
 pm2 startup systemd # and copy the last command
+
+yum -y install epel-release && yum -y update && yum -y install htop
