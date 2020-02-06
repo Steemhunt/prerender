@@ -39,3 +39,9 @@ sudo npm install -g pm2@latest
 # CACHE_MAXSIZE=10000 CACHE_TTL=1200 pm2 start prerender.js --node-args="--max_old_space_size=15000" # 10,000 items for 10 minutes / memory limit 15G
 pm2 start prerender.js # --max-memory-restart 200M
 pm2 startup systemd # and copy the last command
+
+
+# Monitor log file and restart the process when there's 504 error
+# REF: https://github.com/prerender/prerender/issues/614
+sudo apt install swatch
+pm2 start swatch.sh
