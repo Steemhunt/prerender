@@ -1,1 +1,0 @@
-swatch -c /home/updatebot/prerender/swatch.conf -t /home/updatebot/.pm2/logs/prerender-out.log
